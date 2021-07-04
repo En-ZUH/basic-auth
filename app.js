@@ -10,6 +10,10 @@ const mongoose = require('mongoose');
 // Prepare the express app
 const app = express();
 
+
+const MONGODB_URI = process.env.MONGODB_URI;
+
+
 // Process JSON input and put the data on req.body
 app.use(express.json());
 
@@ -49,9 +53,10 @@ app.use(errorHandler);
 
 
 mongoose.
-  connect('mongodb://localhost:27017/auth', {
+  connect(MONGODB_URI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false,
   })
 
   .then(() => {
