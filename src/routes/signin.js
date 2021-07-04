@@ -7,12 +7,13 @@ const base64 = require('base-64');
 const signin = express.Router();
 
 const Users = require('../models/Users');
+const auth = require('../middleware/auth');
 
 
 // Signin Route -- login with username and password
 // test with httpie
 // http post :3000/signin -a john:foo
-signin.post('/signin', async (req, res) => {
+signin.post('/signin', auth, async (req, res) => {
 
     /*
       req.headers.authorization is : "Basic sdkjdsljd="

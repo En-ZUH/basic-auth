@@ -1,16 +1,19 @@
 # Basic Auth
+
 Deploying an Express server implements basic authentication, with Signin and Signup, using Mongo DB.
 
-
 ****
-# Author: 
+
+## Author
+
 ### Enas Batayneh
 
 ****
+
 ## Links
 
-* [Pull request](https://github.com/En-ZUH/api-server/pulls)
-* [Github Actions](https://github.com/En-ZUH/api-server/actions/new)
+* [Pull request](https://github.com/En-ZUH/basic-auth/pulls)
+* [Github Actions](https://github.com/En-ZUH/basic-auth/actions)
 
 * [Deployed App to Heroku /production](https://basic-auth-enas.herokuapp.com/)
 
@@ -18,7 +21,7 @@ Deploying an Express server implements basic authentication, with Signin and Sig
 
 * express  
 * (.env) file
-  * PORT 
+  * PORT
   * MONGOOSE_URI
 
 ## Dependencies needs to install
@@ -33,8 +36,8 @@ Deploying an Express server implements basic authentication, with Signin and Sig
 1. clone the repository
 2. run the command (nodemon)
 
-
 ## UML Diagram
+
 ![img](uml4.jpg)
 
 <!-- ## Testing
@@ -44,7 +47,3 @@ Deploying an Express server implements basic authentication, with Signin and Sig
 * run the command(npm test) -->
 
 <!-- ![img](test00.PNG) -->
-
- 
-
- 

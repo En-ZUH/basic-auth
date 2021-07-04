@@ -12,6 +12,7 @@ require('dotenv').config();
 const app = express();
 
 
+
 const MONGODB_URI = process.env.MONGODB_URI;
 
 
@@ -42,7 +43,7 @@ app.get('/foo', (request, response) => {
   throw new Error('Error');
 });
 
-
+//app.use(routes);
 app.use('/signin', signin);
 app.use('/signup', signup);
 

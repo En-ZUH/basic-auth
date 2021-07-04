@@ -7,6 +7,7 @@ const base64 = require('base-64');
 const signup = express.Router();
 
 const Users = require('../models/Users');
+const auth = require('../middleware/auth');
 
 // Signup Route -- create a new user
 // Two ways to test this route with httpie
@@ -14,7 +15,7 @@ const Users = require('../models/Users');
 // http post :3000/signup usernmae=john password=foo
 
 
-signup.post('/signup', async (req, res) => {
+signup.post('/signup', auth, async (req, res) => {
 
     try {
         req.body.password = await bcrypt.hash(req.body.password, 10);
