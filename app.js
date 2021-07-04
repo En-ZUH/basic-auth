@@ -5,6 +5,7 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const base64 = require('base-64');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 
 // Prepare the express app
@@ -40,6 +41,7 @@ app.get('/', (request, response) => {
 app.get('/foo', (request, response) => {
   throw new Error('Error');
 });
+
 
 app.use('/signin', signin);
 app.use('/signup', signup);
