@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 
-const MONGODB_URI = 'mongodb+srv://enasbataineh:123456@789@cluster0.c5nnh.mongodb.net/auth?retryWrites=true&w=majority';
+const MONGODB_URI = process.env.MONGODB_URI;
 
 
 // Process JSON input and put the data on req.body
@@ -53,7 +53,7 @@ app.use(errorHandler);
 
 
 mongoose.
-  connect('mongodb+srv://enasbataineh:123456@789@cluster0.c5nnh.mongodb.net/auth?retryWrites=true&w=majority', {
+  connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
