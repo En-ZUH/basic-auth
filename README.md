@@ -9,8 +9,8 @@ Deploying an Express server implements basic authentication, with Signin and Sig
 ****
 ## Links
 
-<!-- * [Pull request](https://github.com/En-ZUH/api-server/pulls)
-* [Github Actions](https://github.com/En-ZUH/api-server/actions/new) -->
+* [Pull request](https://github.com/En-ZUH/api-server/pulls)
+* [Github Actions](https://github.com/En-ZUH/api-server/actions/new)
 
 * [Deployed App to Heroku /production](https://basic-auth-enas.herokuapp.com/)
 
@@ -24,7 +24,7 @@ Deploying an Express server implements basic authentication, with Signin and Sig
 ## Dependencies needs to install
 
 * npm init -y
-* npm i dotenv express cors mongoose base-64 bcrypt
+* npm i dotenv express cors mongoose bacse-64 bcrypt
 * npm i -D jest supertest eslint
 * sudo service mongodb start
 
@@ -36,8 +36,6 @@ Deploying an Express server implements basic authentication, with Signin and Sig
 
 ## UML Diagram
 ![img](uml4.jpg)
- 
-
 
 <!-- ## Testing
 
