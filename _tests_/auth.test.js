@@ -12,22 +12,22 @@ const auth = require('../src/middleware/auth');
 describe('Basic Auth', () => {
     it('POST sign up', async () => {
         const user = {
-            username: 'enas',
+            username: 'ali',
             password: '12345',
         };
         const response = await request.post('/signup').send(user);
         expect(response.status).toEqual(201);
-        expect(response.body.username).toEqual('enas');
+        expect(response.body.username).toEqual('ali');
     });
     it('POST signin', async () => {
-        let user = base64.encode('enas:12345');
+        let user = base64.encode('ali:12345');
         let response = await request.post('/signin').set(`Authorization`, `Basic ${user}`);
         expect(response.status).toEqual(200);
-        expect(response.body.username).toEqual('enas');
+        expect(response.body.username).toEqual('ali');
     });
     describe('test middleware', () => {
         it('Basic Header', async () => {
-            let user = base64.encode('enas:12345');
+            let user = base64.encode('ali:12345');
             let response = await request.post('/signin').set(`Authorization`, `Basic ${user}`);
             expect(response.status).toEqual(200);
             expect(response.body).toBeTruthy();

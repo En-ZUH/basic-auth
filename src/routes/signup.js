@@ -15,13 +15,20 @@ const auth = require('../middleware/auth');
 // http post :3000/signup usernmae=john password=foo
 
 
-signup.post('/signup', auth, async (req, res) => {
+signup.post('/signup', async (req, res) => {
 
     try {
-        req.body.password = await bcrypt.hash(req.body.password, 10);
-        const user = new Users(req.body);
-        const record = await user.save(req.body);
-        res.status(200).json(record);
+        // req.body.password = await bcrypt.hash(req.body.password, 10);
+        console.log('THE record IIIIIS:', req.body);
+        const { username, password } = req.body;
+        const hash = await bcrypt.hash(password, 10);
+        const user = new Users({ username, password: hash });
+
+        // console.log('THE USER IIIIIS:', user);
+        const record = await user.save();
+
+
+        res.status(201).json(record);
     } catch (e) { res.status(403).send("Error Creating User"); }
 });
 
