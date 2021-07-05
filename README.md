@@ -38,7 +38,7 @@ Deploying an Express server implements basic authentication, with Signin and Sig
 
 ## UML Diagram
 
-![img](uml4.jpg)
+ 
 
 <!-- ## Testing
 
