@@ -44,7 +44,6 @@ Deploying an Express server implements basic authentication, with Signin and Sig
 * run the command(npm test)  
 
  ![img](test6.PNG)  
-
  
 ## UML Diagram
  ![img](uml4.jpg)
