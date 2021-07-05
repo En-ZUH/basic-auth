@@ -20,6 +20,7 @@ signup.post('/signup', async (req, res) => {
     try {
         // req.body.password = await bcrypt.hash(req.body.password, 10);
         console.log('THE record IIIIIS:', req.body);
+
         const { username, password } = req.body;
         const hash = await bcrypt.hash(password, 10);
         const user = new Users({ username, password: hash });

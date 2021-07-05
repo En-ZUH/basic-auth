@@ -36,18 +36,15 @@ Deploying an Express server implements basic authentication, with Signin and Sig
 1. clone the repository
 2. run the command (nodemon)
 
-## UML Diagram
 
-<<<<<<< HEAD
-<!-- ![img](uml4.jpg) -->
-=======
- 
->>>>>>> 7cc0ddc8e8b64e955cff1d84dcf9f339d5d841a7
-
-<!-- ## Testing
+  ## Testing
 
 * test file (server.test.js)
 
-* run the command(npm test) -->
+* run the command(npm test)  
 
-<!-- ![img](test00.PNG) -->
+ ![img](test6.PNG)  
+
+ 
+## UML Diagram
+ ![img](uml4.jpg)

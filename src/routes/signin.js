@@ -13,7 +13,7 @@ const auth = require('../middleware/auth');
 // Signin Route -- login with username and password
 // test with httpie
 // http post :3000/signin -a john:foo
-signin.post('/signin', auth, async (req, res) => {
+signin.post('/signin', async (req, res) => {
 
     /*
       req.headers.authorization is : "Basic sdkjdsljd="
